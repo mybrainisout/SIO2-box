@@ -1,0 +1,50 @@
+CREATE DATABASE aquiflor;
+USE aquiflor;
+
+CREATE TABLE grpremise (grp_id  int not null auto_increment , grp_reference char(1), grp_libelle varchar (50), grp_tauxremise int(5.2), constraint pk_grpremise primary key (id));
+CREATE TABLE clients (clt_id int not null auto_increment, clt_nom varchar (50), clt_prenom varchar (50), clt_codepostal char (5), clt_ville varchar(50), clt_telephone varchar (14), clt_portable varchar(14), constraint pk_clients primary key (id)); 
+CREATE TABLE commandes (cde_id int not null auto_increment, cde_date datetime (8), cde_totalTTC int(14.2), constraint pk_commandes primary key (id));
+CREATE TABLE compositions (comp_id int not null auto_increment, comp_libelle varchar (100), comp_codearticle varchar (10), comp_prixventeTTC int(14.2), constraint pk_compositions primary key (id));
+CREATE TABLE recettes (rec_id int not null auto_increment, rec_description varchar(4000), rec_datecreation datetime(8), constraint pk_recettes primary key (id_comp, id_flr));
+CREATE TABLE fleurs (flr_id int not null auto_increment, flr_codearticle varchar (10), flr_nom varchar (100), flr_description varchar (4000), flr_conseils varchar(4000), flr_prixventeTTC int(14.2), constraint pk_fleurs primary key (id));
+create table concerner (conc_idcommandes numeric not null auto_increment, conc_idcompositions numeric not null auto_increment, conc_idfleur numeric not null auto_increment, constraint pk_concerner primary key (conc_idcommandes, conc_idcompositions, conc, id_fleurs));
+create table contenir (cont_idfleurs numeric not null auto_increment, cont_idcompositions numeric not null auto_increment, cont_quantite numeric not null auto_increment, cont_commandes numeric not null auto_increment, constraint pk_contenir primary key (cont_idfleurs, cont_idcompositions,id_quantite, id_commandes));
+create table utiliser (util_idfleurs numeric not null auto_increment, util_idrecettes numeric not null auto_increment, constraint pk_utiliser primary key (util_idfleurs, util_idrecettes));
+
+alter table clients add constraint fk_clients_groupes_remises foreign key (idgrp_remises) references grpremises (grp_id);
+alter table commandes add constraint fk_commandes_clients foreign key (idclients) references clients(clt_id); 
+alter table compositions add constraint fk_compositions_recettes foreign key (idrecettes) references recettes(rec_id);
+alter table concerner add constraint fk_concerner_commandes foreign key (idcommandes) references commandes (cde_id);
+alter table concerner add constraint fk_concerner_compositions foreign key (idcompositions) references compositions (comp_id);
+alter table concerner add constraint fk_concerner_fleurs foreign key (idfleurs) references fleurs (flr_id);
+alter table contenir add constraint fk_contenir_fleurs foreign key (idfleurs) references fleurs (flr_id);
+alter table contenir add constraint fk_contenir_compositions foreign key (idcompositions) references compositions (comp_id);
+alter table utiliser add constraint fk_utiliser_fleurs foreign key (idfleurs) references fleurs (flr_id);
+alter table utiliser add constraint fk_utiliser_recettes foreign key (idrecettes) references recettes (rec_id);
+
+
+insert into clients values (' ','patamob','adhemar', '33000', 'bordeaux', '05-56-56-56-56','06-06-06-06-08','3');
+insert into clients values (' ','zeublouse', 'agathe', '33000', 'bordeaux', '02-41-33-31-18', '06-08-06-08-70','1');
+insert into clients values (' ', 'kuzbidon', 'alex', '33000', 'bordeaux', '05-47-46-58-96', '06-06-06-06-08');
+insert into clients values (' ', 'locale', 'anasthasie', '33000', 'bordeaux', '', '','3');
+insert into clients values (' ','teutmaronne', 'armand', '33000', 'bordeaux', '','','3');
+insert into clients values (' ','zoudanlkou', 'debbie', '33000','bordeaux','','06-05-58-89-69', '');
+insert into clients values (' ', 'rivenbusse', 'elsa','33000', 'bordeaux','05-45-85-85-96','','1');
+insert into clients values (' ', 'ardelpic', 'helmut','33000', 'bordeaux','','3');insert into clients values ( 'ardelpic', 'herlmut', '33000', 'bordeaux', '', '', '3');
+insert into clients values ( 'vrante', 'helena', '33000', 'bordeaux', '', '01010101','2');
+insert into clients values ( 'enfatllite', 'melusine', '33000', 'bordeaux', '', '', '3');
+insert into clients values ( 'eurketumeme', 'odile', '33000', 'bordeaux', '060606060', '');
+insert into clients values ( 'hotdeugou', 'olaf', '33000', 'bordeaux', '', '', '3');
+insert into clients values ( 'odlaveille', 'pacome', '33000', 'bordeaux', '', '0648484848', '1');
+insert into clients values ( 'amartakaldire', 'quentin', '33000', 'bordeaux', '', '', '2');
+insert into clients values ( 'peursconla', 'humphrey', '33000', 'bordeaux', '', '', '3');
+insert into clients values ('traibien', 'samira', '33000', 'bordeaux', '', '', '3');
+insert into clients values ('fonfec', 'sphie', '33000', 'bordeaux', '', '', '3');
+insert into clients values ('fairant', 'teddy', '33000', 'bordeaux');
+insert into clients values ('blaireur', 'terry', '33000', 'bordeaux', '', '', '3');
+insert into clients values ('ajerre', 'tex', '33000', 'bordeaux', '', '', '3');
+insert into clients values ('chmonfisse', 'thierry', '33000', 'bordeaux', '', '', '3');
+insert into clients values ('phototetedemort', 'thomas', '33000', 'bordeaux', '', '', '3');
+insert into clients values ('kaecoute', 'xavier', '33000', 'bordeaux');
+insert into clients values ('adrouille-toultan', 'yves', '33000', 'bordeaux', '', '', '3');
+

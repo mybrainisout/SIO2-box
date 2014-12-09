@@ -1,0 +1,157 @@
+body {
+    margin: 0px;
+    min-width: 1000px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+#headerbanner{
+    width: 100%; 
+    height: 120px; 
+}
+
+#logo{
+    height: 120px;
+    width: 120px;
+    float: left;
+    background-image: url(../images/bugdroid.png);
+}
+
+#banner{
+    line-height: 120px; 
+    text-align: center; 
+    font-size: 48px; 
+    margin-left: 120px; 
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: block;
+}
+
+#headerfooter {
+    height: 20px;
+    text-transform: uppercase;
+    line-height: 20px;
+    opacity: 0.8;
+}
+
+#contentwrapper{
+    width: 100%;
+    min-height: 600px;  
+    clear: both; 
+    margin-top: 10px;
+}
+
+#leftmenubar{
+    min-height: 600px;
+    width: 200px;
+    float: left;
+}
+
+#content {
+    min-height: 600px; 
+    margin-left: 200px;
+    padding-left: 5px;
+}
+
+#content article.left{
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+#content article.right{
+    width: 50%;
+    display: inline-block;
+}
+
+#pagefooter{
+    height: 40px; 
+    line-height: 40px; 
+    position: fixed;
+    bottom: 0;
+}
+
+#pagefooter #footertext{
+    display: block;
+    width: 500px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 9px; 
+    font-style:italic; 
+    float: left;
+}
+
+#pagefooter #social_links{
+    margin-left: 510px;
+    text-align: right;
+}
+
+#pagefooter #social_links a{
+    text-decoration: none;    
+    display: inline-block;
+    background-image: url(../images/bkg_social.png);
+    background-repeat: no-repeat;    
+    width: 36px;
+    height: 36px;
+    margin: 2px;
+}
+
+#pagefooter #social_links img{
+    border: none;
+    margin: 6px 5px;
+}
+
+.menu{
+    width: 160px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu header{
+    width: 100%;
+    text-align: center; 
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #42c0fb;
+    color: white;
+    border-radius: 8px 8px 0px 4px;
+}
+
+.menu a, .menu a:visited{
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 2px;
+    color: #42c0fb;
+}
+
+.menu a:hover{
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+aside#photo{
+    width: 350px;
+    height: 400px;
+    margin-left: 10px;
+    display: inline-block;
+    background-color: #cccccc;
+    border-radius: 6px;
+}
+
+aside#photo>img{
+    border: none;
+    display: inline-block;
+    width: 300px;
+    height: 350px;
+    margin: 20px 20px;
+}

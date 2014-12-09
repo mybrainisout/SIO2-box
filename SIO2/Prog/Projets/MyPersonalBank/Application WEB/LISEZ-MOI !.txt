@@ -1,0 +1,5 @@
+On ne touche pas au .zip et on ne le remplace pas !!
+
+Pour toute modification, télégarder le .zip et sauvegarder vos modifications/créations dans le dossier "Modification".
+
+Pour ce faire, créez un dossier avec votre nom et copiez les pages de code concernées.

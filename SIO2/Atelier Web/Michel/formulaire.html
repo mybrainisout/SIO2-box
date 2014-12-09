@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mon site</title>
+		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/styles_forms.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header id="headerbanner">
+			<section id="logo">
+				
+			</section>
+			<section id="banner">
+				Formulaire
+			</section>
+		</header>
+		<footer id="headerfooter">
+			
+		</footer>
+		<section id="contentwrapper">
+			<section id="leftmenubar">
+				<nav class="menu leftmenu">
+					<header>
+						Menu
+					</header>
+					<a href="index.html" title="Accueil">Accueil</a>
+					<a href="liste.html" title="Liste">Liste</a>
+					<a href="formulaire.html" title="Formulaire">Formulaire</a>				
+				</nav>
+			</section>
+			<section id="content">
+				<form id="frmpersonne" action="" method="get">
+					<h2>Formulaire</h2>
+					<label for="civilite">Civilité :</label>
+					<select id="civilite" name="civilite">
+						<option value="1">Mme.</option>
+						<option value="2">Mr.</option>
+					</select><br />
+					<label for="txtprenom">Prénom :</label>
+					<input id="txtprenom" type="text" name="txtprenom" /><br />
+					<label for="txtnom">Nom :</label>
+					<input id="txtnom" type="text" name="txtnom" /><br />
+					<label for="txtadresse">Adresse :</label><br />
+					<textarea id="txtadresse" name="txtadresse"></textarea><br />
+					<label for="txtcodepostal">Code Postal :</label>
+					<input id="txtcodepostal" type="text" name="txtcodepostal" /><br />
+					<select name="cbville">
+						<option value="1">BORDEAUX</option>
+						<option value="2">MERIGNAC</option>
+					</select><br />
+					
+				</form>
+			</section>
+		</section>
+		<footer id="pagefooter">
+			Footer de ma page
+		</footer>
+	</body>
+</html>

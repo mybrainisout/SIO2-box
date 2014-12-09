@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<personnes>
+	<pers id="1" nom="BERNADET" prenom="Bastien" photo="unknown.png" />
+	<pers id="2" nom="BERTIN" prenom="Alexandre" photo="BERTINAlexandre.png" />
+	<pers id="3" nom="CLEMENCEAU" prenom="Franck" photo="CLEMENCEAUFranck.png" />
+	<pers id="4" nom="CRASBERCU" prenom="Damien" photo="CRASBERCUDamien.png" />
+	<pers id="5" nom="EL ACHIRI" prenom="Benatia" photo="ELACHIRIBenatia.png" />
+	<pers id="6" nom="FORT" prenom="Pierre-Alexandre" photo="FORTPierreAlexandre.png" />
+	<pers id="7" nom="GAUTHIER-LAFAYE" prenom="Victor" photo="GAUTHIERLAFAYEVictor.png" />
+	<pers id="8" nom="LEBARBIER" prenom="Guillaume" photo="LEBARBIERGuillaume.png" />
+	<pers id="9" nom="MAHE" prenom="Gwenaël" photo="MAHEGwenael.png" />
+	<pers id="10" nom="PAIRAULT" prenom="Marie" photo="PAIRAULTMarie.png" />
+	<pers id="11" nom="PAUCANT" prenom="Nicolas" photo="PAUCANTNicolas.png" />
+	<pers id="12" nom="WILGENBUS" prenom="Robin" photo="WILGENBUSRobin.png" />
+	<pers id="13" nom="XU" prenom="Peter" photo="XUPeter.png" />
+</personnes>

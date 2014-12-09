@@ -1,0 +1,25 @@
+public static void exercice3(final int n) {
+		// TODO
+
+		/*
+		 * int n = 30;
+		 * 
+		 * System.out.println("le nombre n des entiers "); Scanner sc = new
+		 * Scanner(System.in); int n1= sc.nextInt(); sc.close();
+		 */
+		for (int i = 0; i <= n; i++) {
+			int diviseur = 2;
+			int reste = i % diviseur;
+
+			while (reste != 0) {
+				diviseur = diviseur + 1;
+				reste = i % diviseur;
+
+			}
+			if (diviseur == i) {
+				System.out.print(diviseur + "  ");
+
+			}
+		}
+
+	}

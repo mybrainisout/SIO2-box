@@ -1,0 +1,34 @@
+div#contenttable{
+    width: 50%;
+    float: left;
+}
+
+table.listing{
+    border-collapse: collapse;
+    border: solid 1px #42c0fb;
+    cursor: default;
+    box-shadow: 2px 2px 5px 2px #42c0fb;
+}
+
+table.listing th{
+    border-bottom: dashed 1px #42c0fb;
+    border-collapse: collapse;
+}
+
+table.listing th.thid, table.listing td.tdid{
+    display: none;
+}
+
+table.listing td.action, table.listing td.arrow{
+    text-align: center;
+}
+
+table.listing td.arrow{
+    visibility: hidden;
+}
+    
+table.listing td.action img, table.listing td.arrow img{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}

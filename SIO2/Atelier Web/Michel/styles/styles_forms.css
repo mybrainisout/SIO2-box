@@ -1,0 +1,32 @@
+#frmpersonne{
+    width: 500px;
+    margin: 10px auto;
+}
+
+#frmpersonne h2{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+}
+
+#frmpersonne label{
+    display: block;
+    float: left;
+    width: 120px;
+    margin-right: 10px;
+    
+}
+
+#frmpersonne input[type=text]{
+    width: 200px;
+}
+
+#frmpersonne select[name=cbville], #frmpersonne textarea{
+    width: 100%;
+}
+
+#frmpersonne input:focus, #frmpersonne select:focus, #frmpersonne textarea:focus{
+    border-color: red;
+}
+
